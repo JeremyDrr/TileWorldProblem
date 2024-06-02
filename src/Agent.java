@@ -77,6 +77,7 @@ public class Agent implements Runnable {
     private void handleTaskRequest(Message message) {
         // Handle task request from another agent
         // Example: Offer to perform the task for some points
+
         int taskPoints = 10; // Example points for task
         sendMessage(new Message(id, message.getSenderId(), MessageType.OFFER_TASK, "Task Offer", taskPoints));
     }
@@ -110,6 +111,7 @@ public class Agent implements Runnable {
     }
 
     public void notifyOperationSuccess() {
+        points += 50;
         System.out.println("Great success. The operation succeeded");
     }
 

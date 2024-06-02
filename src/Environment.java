@@ -59,7 +59,6 @@ public class Environment {
                 Thread.currentThread().interrupt();
                 break;
             }
-            printGrid();
         }
     }
 
@@ -82,6 +81,7 @@ public class Environment {
                 handleTransferPointsOperation(agent, op.getTargetAgentId(), op.getPoints());
                 break;
         }
+        printGrid();
     }
 
     private void handlePickOperation(Agent agent, String color) {
